@@ -24,36 +24,36 @@ export default class Underline extends Plugin {
     });
 
     this.addCommand({
-      id: "toggle-center-tag",
-      name: "Toggle center tag",
-      callback: () => this.urlIntoSelection("<center>", "</center>"),
+      id: "toggle-superscript-tag",
+      name: "Toggle superscript tag",
+      callback: () => this.urlIntoSelection("<sup>", "</sup>"),
       hotkeys: [
         {
           modifiers: ["Mod", "Shift"],
-          key: "c",
+          key: "=",
         },
       ],
     });
 
     this.addCommand({
-      id: "toggle-link-heading",
-      name: "Toggle a link to heading in the same file",
-      callback: () => this.urlIntoSelection("[[#", "]]"),
+      id: "toggle-subscript-tag",
+      name: "Toggle subscript tag",
+      callback: () => this.urlIntoSelection("<sub>", "</sub>"),
       hotkeys: [
         {
           modifiers: ["Mod"],
-          key: "3",
+          key: "=",
         },
       ],
     });
     this.addCommand({
-      id: "toggle-link-block",
-      name: "Toggle a link to block in the same file",
-      callback: () => this.urlIntoSelection("[[#^", "]]"),
+      id: "toggle-mhchem-tag",
+      name: "Toggle mhchem tag",
+      callback: () => this.urlIntoSelection("$\\ce{", "}$"),
       hotkeys: [
         {
-          modifiers: ["Mod"],
-          key: "6",
+          modifiers: ["Mod", "Shift"],
+          key: "c",
         },
       ],
     });
